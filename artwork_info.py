@@ -67,6 +67,18 @@ class ArtworkInfo:
     def bookmarked(self):
         return self.info['bookmarkData']
 
+    def get_bookmark_id(self):
+        if not self.bookmarked():
+            return None
+        else:
+            return self.info['bookmarkData']['id']
+
+    def is_bookmark_private(self):
+        if not self.bookmarked():
+            raise Exception("You haven't bookmarked the artwork")
+        else:
+            return self.info['bookmarkData']['private']
+
 
 class IllustrationInfo(ArtworkInfo):
     def __init__(self, info: json):

@@ -3,7 +3,7 @@ import json
 import pathlib
 import os.path
 import pyxiv
-from pixiv_illustration_size import PixivIllustrationSize
+from pixiv_keywords import PixivIllustrationSize
 
 
 class ArtworkInfo:
